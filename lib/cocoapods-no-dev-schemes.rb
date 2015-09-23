@@ -1,1 +1,3 @@
-require 'cocoapods-no-dev-schemes/gem_version'
+module CocoapodsNoDevSchemes
+  VERSION = '1.0.0'
+end

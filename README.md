@@ -1,11 +1,17 @@
-# cocoapods-no-dev-schemes
+# CocoaPods No-Dev-Schemes
 
-A description of cocoapods-no-dev-schemes.
+Is it annoying that `pod install`ing with development pods changes your target? Well now they won't be created for you anymore. There are good reasons for [doing it](https://github.com/CocoaPods/CocoaPods/pull/3600), but not when working with an app.
 
-## Installation
+Use a Gemfile. [Here's a guide](http://guides.cocoapods.org/using/a-gemfile.html)
 
-    $ gem install cocoapods-no-dev-schemes
+Gemfile:
+```
+gem "cocoapods"
+gem "cocoapods-no-dev-schemes"
+```
 
-## Usage
-
-    $ pod spec schemes POD_NAME
+Podfile:
+```
+plugin "cocoapods-no-dev-schemes"
+[...]
+```
