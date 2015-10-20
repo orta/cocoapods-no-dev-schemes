@@ -5,7 +5,7 @@ Pod::HooksManager.register('cocoapods-no-dev-schemes', :post_install) do |contex
   # So we need to undo this function:
   # https://github.com/CocoaPods/Xcodeproj/blob/27aecbfd66e883d1df616355347246b30fec551d/lib/xcodeproj/scheme.rb#L224-L244
 
-  shared_scheme_path = "Pods/Pods.xcodeproj/xcshareddata/"
+  shared_scheme_path = "#{context.sandbox_root}/Pods.xcodeproj/xcshareddata/"
   if Dir.exist?(shared_scheme_path)
 
     # But I've not needed to undo it yet.
